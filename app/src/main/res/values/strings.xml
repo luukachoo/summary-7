@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">summary 7</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fyneen">Fyneen</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="messages">Messages</string>
+    <string name="notifications">Notifications</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="calendar">Calendar</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="travis_scott">Travis Scott</string>
+    <string name="travisscott_email">travisscott@gmail.com</string>
+</resources>
