@@ -8,7 +8,7 @@
     <style name="Theme.Summary7" parent="Base.Theme.Summary7" />
 
     <!-- App theme that extends from Theme.AppCompat -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.Material3.Light">
         <!-- Customize your theme as needed -->
     </style>
 </resources>

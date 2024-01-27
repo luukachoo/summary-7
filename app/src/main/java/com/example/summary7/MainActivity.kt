@@ -2,10 +2,12 @@ package com.example.summary7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.summary7.databinding.ActivityMainBinding
@@ -15,12 +17,11 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var binding : ActivityMainBinding
+    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         installSplashScreen()
         setContentView(binding.root)
 
@@ -47,5 +48,15 @@ class MainActivity : AppCompatActivity() {
 
         headerBinding.recyclerView.adapter = adapter
         adapter.submitList(menuItems)
+
+        headerBinding.swSwitchPersonalToBusiness.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                headerBinding.tvBusiness.visibility = View.GONE
+                headerBinding.tvPersonal.visibility = View.VISIBLE
+            } else {
+                headerBinding.tvBusiness.visibility = View.VISIBLE
+                headerBinding.tvPersonal.visibility= View.GONE
+            }
+        }
     }
 }

@@ -12,4 +12,6 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="travis_scott">Travis Scott</string>
     <string name="travisscott_email">travisscott@gmail.com</string>
+    <string name="business">Business</string>
+    <string name="personal">Personal</string>
 </resources>
