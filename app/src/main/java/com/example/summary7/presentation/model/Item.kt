@@ -1,4 +1,4 @@
-package com.example.summary7
+package com.example.summary7.presentation.model
 
 data class Item(
     val id: Int,

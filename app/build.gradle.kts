@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -52,6 +54,19 @@ dependencies {
     val navVersion = "2.7.6"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-    implementation ("com.mikhaellopez:circularimageview:4.3.0")
+    implementation("com.mikhaellopez:circularimageview:4.3.0")
 
+    // Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.50")
+    kapt("com.google.dagger:hilt-android-compiler:2.50")
+
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    // Coroutine ViewModel Lifecycle Scopes
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+}
+
+kapt {
+    correctErrorTypes = true
 }
